@@ -7,6 +7,7 @@ import App from "./App";
 import configureStore from "./store/configureStore";
 
 import "./index.css";
+import "semantic-ui-css/semantic.css";
 
 const store = configureStore();
 const rootEl = document.getElementById("root");

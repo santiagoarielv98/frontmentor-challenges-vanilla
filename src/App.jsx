@@ -1,13 +1,30 @@
-import SampleComponent from "./components/SampleComponent";
+import { Header, Container, Menu } from "semantic-ui-react";
 
-import "./App.css";
-
-function App() {
+const App = () => {
   return (
-    <div>
-      <SampleComponent />
+    <div className="App">
+      <div className="App-header">
+        <Header inverted as="h1">
+          Project Mini-Mek
+        </Header>
+      </div>
+      <Container>
+        <Menu tabular size="massive">
+          <Menu.Item name="unitInfo" active={true}>
+            Unit Info
+          </Menu.Item>
+          <Menu.Item name="pilots" active={false}>
+            Pilots
+          </Menu.Item>
+          <Menu.Item name="mechs" active={false}>
+            Mechs
+          </Menu.Item>
+          <Menu.Item name="unitOrganization" active={false}>
+            Unit Organization
+          </Menu.Item>
+        </Menu>
+      </Container>
     </div>
   );
-}
-
+};
 export default App;

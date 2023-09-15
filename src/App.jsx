@@ -1,4 +1,12 @@
-import { Header, Container, Menu } from "semantic-ui-react";
+import { Container, Header } from "semantic-ui-react";
+import TabBarContainer from "./features/tabs/TabBarContainer";
+
+const tabs = [
+  { name: "unitInfo", label: "Unit Info" },
+  { name: "pilots", label: "Pilots" },
+  { name: "mechs", label: "Mechs" },
+  { name: "unitOrganization", label: "Unit Organization" },
+];
 
 const App = () => {
   return (
@@ -9,20 +17,7 @@ const App = () => {
         </Header>
       </div>
       <Container>
-        <Menu tabular size="massive">
-          <Menu.Item name="unitInfo" active={true}>
-            Unit Info
-          </Menu.Item>
-          <Menu.Item name="pilots" active={false}>
-            Pilots
-          </Menu.Item>
-          <Menu.Item name="mechs" active={false}>
-            Mechs
-          </Menu.Item>
-          <Menu.Item name="unitOrganization" active={false}>
-            Unit Organization
-          </Menu.Item>
-        </Menu>
+        <TabBarContainer tabs={tabs} size="massive" />
       </Container>
     </div>
   );

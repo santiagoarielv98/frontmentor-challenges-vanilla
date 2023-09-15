@@ -1,5 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 
 import App from "./App";
@@ -12,11 +11,8 @@ import "semantic-ui-css/semantic.css";
 const store = configureStore();
 const rootEl = document.getElementById("root");
 
-ReactDOM.create(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  rootEl
+ReactDOM.createRoot(rootEl).render(
+  <Provider store={store}>
+    <App />
+  </Provider>
 );

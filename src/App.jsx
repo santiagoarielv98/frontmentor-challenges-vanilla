@@ -1,10 +1,9 @@
 import { Container, Header } from "semantic-ui-react";
 import TabBarContainer from "./features/tabs/TabBarContainer";
-
-const UnitInfo = () => <div>Unit Info content</div>;
-const Pilots = () => <div>Pilots content</div>;
-const Mechs = () => <div>Mechs content</div>;
-const UnitOrganization = () => <div>Unit Organization content</div>;
+import Mechs from "./features/mechs/Mechs";
+import UnitInfo from "./features/unitInfo/UnitInfo";
+import Pilots from "./features/pilots/Pilots";
+import UnitOrganization from "./features/unitOrganization/UnitOrganization";
 
 const tabs = [
   { name: "unitInfo", label: UnitInfo },

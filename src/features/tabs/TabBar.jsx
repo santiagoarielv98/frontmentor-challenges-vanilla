@@ -17,7 +17,10 @@ const mapState = (state) => {
 
 const actions = { onTabClick: selectTab };
 
-const TabBar = (props) => {
+const TabBar = connect(
+  mapState,
+  actions
+)((props) => {
   const { tabs, currentTab, onTabClick, ...otherProps } = props;
 
   const tabItems = tabs.map((tabInfo) => {
@@ -44,7 +47,7 @@ const TabBar = (props) => {
       {tabPanels}
     </div>
   );
-};
+});
 
 TabBar.propTypes = {
   tabs: PropTypes.arrayOf(
@@ -58,4 +61,4 @@ TabBar.propTypes = {
   onTabClick: PropTypes.func.isRequired,
 };
 
-export default connect(mapState, actions)(TabBar);
+export default TabBar;

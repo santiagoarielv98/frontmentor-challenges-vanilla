@@ -1,9 +1,21 @@
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 import { Menu } from "semantic-ui-react";
-import ToggleDisplay from "../../common/components/ToggleDisplay";
 
 import Tab from "./Tab";
+import ToggleDisplay from "../../common/components/ToggleDisplay";
+
+import { selectCurrentTab } from "./tabsSelectors";
+import { selectTab } from "./tabsActions";
+
+const mapState = (state) => {
+  const currentTab = selectCurrentTab(state);
+
+  return { currentTab };
+};
+
+const actions = { onTabClick: selectTab };
 
 const TabBar = (props) => {
   const { tabs, currentTab, onTabClick, ...otherProps } = props;
@@ -39,10 +51,11 @@ TabBar.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
+      component: PropTypes.func.isRequired,
     })
   ).isRequired,
   currentTab: PropTypes.string.isRequired,
   onTabClick: PropTypes.func.isRequired,
 };
 
-export default TabBar;
+export default connect(mapState, actions)(TabBar);

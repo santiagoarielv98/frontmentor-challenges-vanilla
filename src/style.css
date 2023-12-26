@@ -6,7 +6,7 @@
     @apply text-[11px] text-center fixed bottom-0 inset-x-0 bg-gray-100 py-2;
   }
   .attribution a {
-    @apply text-blue-500;
+    @apply text-blue-700;
   }
 
   .desktop {

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/node": "^20.10.5",
     "autoprefixer": "^10.4.16",
     "glob": "^10.3.10",
     "path": "^0.12.7",

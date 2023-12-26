@@ -8,6 +8,9 @@ export default {
         "primary-yellow": "#FFD400",
         "primary-grey": "#808080",
       },
+      fontFamily: {
+        figtree: ["Figtree", "sans-serif"],
+      },
     },
   },
 };

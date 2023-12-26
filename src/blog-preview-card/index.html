@@ -7,30 +7,32 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/blog-preview-card/style.css" />
   </head>
-  <body class="bg-primary-yellow">
-    <main class="h-screen w-screen flex justify-center">
-      <article class="pt-[13.7rem]">
-        <section class="max-w-96 p-6 bg-white rounded-3xl border border-black shadow-[.5rem_.5rem_0]">
+  <body class="bg-primary-yellow text-xs md:text-base font-normal font-figtree">
+    <main class="h-screen w-screen flex items-center justify-center">
+      <article class="p-6">
+        <section
+          class="max-w-96 p-6 bg-white rounded-3xl border border-black shadow-[.5rem_.5rem_0] hover:shadow-[1rem_1rem_0] transition-shadow duration-300 ease-in-out transform"
+        >
           <figure class="mb-2">
             <img
-              class="overflow-hidden rounded-xl bg-primary-yellow text-white object-cover"
+              class="overflow-hidden rounded-xl bg-primary-yellow text-white object-cover h-[200px]"
               src="assets/images/illustration-article.svg"
               alt="article example"
               height="200"
               width="100%"
             />
-            <figcaption class="mt-6 inline-flex bg-primary-yellow font-extrabold px-3 py-1 text-sm rounded-md">
+            <figcaption class="mt-6 inline-flex bg-primary-yellow font-extrabold px-3 py-1 md:text-sm rounded-md">
               Learning
             </figcaption>
           </figure>
           <div class="mb-4">
-            <time datetime="2023-12-21" class="text-sm font-semibold">Published 21 Dec 2023</time>
+            <time datetime="2023-12-21" class="md:text-sm font-semibold">Published 21 Dec 2023</time>
           </div>
           <div class="mb-5">
-            <a href="#">
-              <h1 class="text-2xl font-extrabold mb-3.5">HTML & CSS foundations</h1>
+            <a href="#" class="hover:text-primary-yellow">
+              <h1 class="md:text-2xl text-xl font-extrabold mb-3.5">HTML & CSS foundations</h1>
             </a>
-            <p class="text-primary-grey">
+            <p class="text-primary-grey max-md:text-sm">
               These languages are the backbone of every website, defining structure, content, and presentation.
             </p>
           </div>
@@ -47,7 +49,6 @@
         </section>
       </article>
     </main>
-    <img src="./design/desktop-design.jpg" alt="" class="desktop ml-96" />
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
       <a href="https://github.com/santiagoarielv98" target="_blank">Santiago Villanueva</a>.

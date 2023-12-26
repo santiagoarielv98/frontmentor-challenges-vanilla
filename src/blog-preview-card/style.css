@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-- Family: [Figtree](https://fonts.google.com/specimen/Figtree)
-- Weights: 600, 800
-*/
-
 @font-face {
   font-family: "Figtree";
   font-style: normal;
@@ -39,9 +34,68 @@
   src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
 }
 
-body {
-  font-family: "Figtree", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
+@layer components {
+  .body {
+    @apply bg-primary-yellow text-xs md:text-base font-normal font-figtree;
+  }
+
+  .main {
+    @apply h-screen w-screen flex items-center justify-center;
+  }
+
+  .article {
+    @apply p-6;
+  }
+
+  .card {
+    @apply max-w-96 p-6 bg-white rounded-3xl border border-black shadow-[.5rem_.5rem_0] hover:shadow-[1rem_1rem_0] transition-shadow duration-300 ease-in-out transform;
+  }
+
+  .card__figure {
+    @apply mb-2;
+  }
+
+  .card__figure img {
+    @apply overflow-hidden rounded-xl bg-primary-yellow text-white object-cover h-[200px];
+  }
+
+  .card__figure figcaption {
+    @apply mt-6 inline-flex bg-primary-yellow font-extrabold px-3 py-1 md:text-sm rounded-md;
+  }
+
+  .card__date {
+    @apply mb-4;
+  }
+
+  .card__date time {
+    @apply md:text-sm font-semibold;
+  }
+
+  .card__content {
+    @apply mb-5;
+  }
+
+  .card__content a {
+    @apply hover:text-primary-yellow;
+  }
+
+  .card__content h1 {
+    @apply md:text-2xl text-xl font-extrabold mb-3.5;
+  }
+
+  .card__content p {
+    @apply text-primary-grey max-md:text-sm;
+  }
+
+  .card__author {
+    @apply flex items-center pt-0.5;
+  }
+
+  .card__author img {
+    @apply rounded-full h-8 w-8;
+  }
+
+  .card__author span {
+    @apply ml-3 text-sm font-extrabold;
+  }
 }

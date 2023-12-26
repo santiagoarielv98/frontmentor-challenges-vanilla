@@ -1,3 +1,16 @@
-@tailwind base;
+@config './tailwind.config.js';
 @tailwind components;
-@tailwind utilities;
+
+@layer components {
+  .blog-preview-card {
+    @apply bg-white rounded-lg shadow-lg overflow-hidden;
+  }
+
+  .blog-preview-card__image {
+    @apply w-full h-48 object-cover;
+  }
+
+  .blog-preview-card__content {
+    @apply p-4;
+  }
+}

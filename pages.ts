@@ -1,4 +1,5 @@
 const pages: string[] = ["blog-preview-card"];
+
 /**
  * Retrieves the pages and their corresponding file paths.
  * @returns An object containing the pages and their file paths.

@@ -1,7 +1,3 @@
-import { resolve } from "path";
-import { fileURLToPath } from "node:url";
-
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const pages = ["blog-preview-card"];
 
 /**
@@ -9,11 +5,10 @@ const pages = ["blog-preview-card"];
  * @returns An object containing the pages and their file paths.
  */
 export default function getPages() {
-  const input = {
-    main: resolve(__dirname, "index.html"),
-  };
+  const input = {};
   pages.forEach((page) => {
-    input[page] = resolve(__dirname, `src/${page}/index.html`);
+    // input[page] = `src/${page}/index.html`;
+    input[page] = `${page}/index.html`;
   });
   return input;
 }

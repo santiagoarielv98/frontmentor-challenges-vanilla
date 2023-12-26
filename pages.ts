@@ -1,14 +1,19 @@
-const pages = ["blog-preview-card"];
+import { sync as globSync } from "glob";
+import path from "path";
 
-/**
- * Retrieves the pages and their corresponding file paths.
- * @returns An object containing the pages and their file paths.
- */
+const _defaultInput = {
+  index: path.resolve("src/index.html"),
+};
+
 export default function getPages() {
-  const input = {};
-  pages.forEach((page) => {
-    // input[page] = `src/${page}/index.html`;
-    input[page] = `${page}/index.html`;
+  const pattern = "src/*/index.html";
+  const files = globSync(pattern);
+
+  const input: Record<string, string> = _defaultInput ?? {};
+  files.forEach((filePath) => {
+    const folderName = path.basename(path.dirname(filePath));
+    input[folderName] = path.resolve(filePath);
   });
+
   return input;
 }

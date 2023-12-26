@@ -1,8 +1,4 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  // content: ["./src/blog-preview-card/index.html"],
-  // theme: {
-  //   extend: {},
-  // },
-  // plugins: [],
+  content: ["./src/blog-preview-card/index.html"],
 };

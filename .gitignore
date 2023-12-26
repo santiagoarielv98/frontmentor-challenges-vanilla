@@ -43,7 +43,7 @@ dist-ssr
 # Recursive .gitignore
 **/.gitignore
 
-#Ignore Frontend Mentor files
+# Ignore Frontend Mentor files
 
 **/design/
 **/README.md
@@ -52,4 +52,5 @@ dist-ssr
 **/favicon.png
 **/favicon-*.png
 
-
+# Template HTML file
+template.html

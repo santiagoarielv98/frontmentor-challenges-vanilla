@@ -1,3 +1,15 @@
 @tailwind base;
-@tailwind utilities;
 @tailwind components;
+
+@layer components {
+  .attribution {
+    @apply text-[11px] text-center fixed bottom-0 inset-x-0 bg-gray-100 py-2;
+  }
+  .attribution a {
+    @apply text-blue-500;
+  }
+
+  .desktop {
+    @apply fixed inset-0 -z-10 w-screen h-screen;
+  }
+}

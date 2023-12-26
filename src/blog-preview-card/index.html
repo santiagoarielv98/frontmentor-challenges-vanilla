@@ -3,29 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" /> -->
-
-    <title>Frontend Mentor | Blog preview card</title>
+    <title>SV | Blog preview card</title>
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/blog-preview-card/style.css" />
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
-  <body class="h-screen bg-red-500 blog-preview-card">
-    Learning Published 21 Dec 2023 HTML & CSS foundations These languages are the backbone of every website, defining
-    structure, content, and presentation. Greg Hooper
-
+  <body class="bg-primary-yellow">
+    <main class="h-screen w-screen flex justify-center">
+      <article class="pt-[13.7rem]">
+        <section class="max-w-96 p-6 bg-white rounded-3xl border border-black shadow-[.5rem_.5rem_0]">
+          <figure class="mb-2">
+            <img
+              class="overflow-hidden rounded-xl bg-primary-yellow text-white object-cover"
+              src="assets/images/illustration-article.svg"
+              alt="article example"
+              height="200"
+              width="100%"
+            />
+            <figcaption class="mt-6 inline-flex bg-primary-yellow font-extrabold px-3 py-1 text-sm rounded-md">
+              Learning
+            </figcaption>
+          </figure>
+          <div class="mb-4">
+            <time datetime="2023-12-21" class="text-sm font-semibold">Published 21 Dec 2023</time>
+          </div>
+          <div class="mb-5">
+            <a href="#">
+              <h1 class="text-2xl font-extrabold mb-3.5">HTML & CSS foundations</h1>
+            </a>
+            <p class="text-primary-grey">
+              These languages are the backbone of every website, defining structure, content, and presentation.
+            </p>
+          </div>
+          <div class="flex items-center pt-0.5">
+            <img
+              src="assets/images/image-avatar.webp"
+              alt="avatar Greg Hooper"
+              class="rounded-full h-8 w-8"
+              width="32"
+              height="32"
+            />
+            <span class="ml-3 text-sm font-extrabold">Greg Hooper</span>
+          </div>
+        </section>
+      </article>
+    </main>
+    <img src="./design/desktop-design.jpg" alt="" class="desktop ml-96" />
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
-      <a href="#">Your Name Here</a>.
+      <a href="https://github.com/santiagoarielv98" target="_blank">Santiago Villanueva</a>.
     </div>
   </body>
 </html>

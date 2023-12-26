@@ -1,2 +1,47 @@
 @config './tailwind.config.js';
 @tailwind components;
+@tailwind utilities;
+
+/* 
+- Family: [Figtree](https://fonts.google.com/specimen/Figtree)
+- Weights: 600, 800
+*/
+
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/static/Figtree-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("./assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}

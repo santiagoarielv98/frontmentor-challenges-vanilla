@@ -54,3 +54,5 @@ dist-ssr
 
 # Template HTML file
 template.html
+**/README.txt
+**/OFL.txt

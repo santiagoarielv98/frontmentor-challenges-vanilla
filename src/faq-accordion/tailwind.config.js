@@ -4,9 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "light-pink": "#FBFCFE",
-        "grayish-purple": "#9E9AA7",
-        "dark-purple": " #3A3054",
+        primary: "#AD28EB",
+        "light-pink": "#F9F0FF",
+        "grayish-purple": "#8C6991",
+        "dark-purple": " #2F1533",
       },
       fontFamily: {
         work: ["Work Sans", "sans-serif"],

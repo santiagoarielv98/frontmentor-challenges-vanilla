@@ -9,85 +9,111 @@
     <link rel="stylesheet" href="/faq-accordion/style.css" />
   </head>
   <body
-    class="text-base font-work md:bg-[url('./assets/images/background-pattern-desktop.svg')] bg-[url('./assets/images/background-pattern-mobile.svg')] bg-contain bg-no-repeat"
+    class="text-base font-work sm:bg-[url('./assets/images/background-pattern-desktop.svg')] max-sm:bg-[url('./assets/images/background-pattern-mobile.svg')] bg-no-repeat bg-top bg-light-pink overflow-x-hidden text-dark-purple bg-contain"
   >
-    <main class="min-h-screen w-screen flex justify-center items-center overflow-auto px-6 py-16">
-      <article>
-        <section class="bg-white max-w-[37.5rem] w-full md:px-10 md:py-4 rounded-2xl shadow-2xl px-6">
-          <div class="flex items-center md:pt-9 pt-8 md:pb-5 py-3">
-            <img
-              src="./assets/images/icon-star.svg"
-              alt="star"
-              width="40"
-              height="41"
-              class="md:w-10 md:h-10 w-6 h-6"
-            />
-            <h1 class="ml-6 md:text-[3.5rem] font-bold text-[2rem]">FAQs</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="icon-minus" viewBox="0 0 30 31">
+        <path
+          fill="#301534"
+          d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"
+        />
+      </symbol>
+      <symbol id="icon-plus" viewBox="0 0 30 31">
+        <path
+          fill="#AD28EB"
+          d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+        />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 40 41">
+        <path
+          fill="#AD28EB"
+          d="M37.5 20.5a2.467 2.467 0 0 1-1.64 2.344l-9.913 3.604-3.603 9.911a2.5 2.5 0 0 1-4.688 0l-3.604-9.922-9.911-3.593a2.5 2.5 0 0 1 0-4.688l9.921-3.604 3.594-9.911a2.5 2.5 0 0 1 4.688 0l3.604 9.921 9.911 3.594A2.467 2.467 0 0 1 37.5 20.5Z"
+        />
+      </symbol>
+    </svg>
+
+    <main class="min-h-screen w-screen flex justify-center items-center overflow-y-auto">
+      <article class="px-6 py-16">
+        <section class="bg-white max-w-[37.5rem] w-full rounded-2xl shadow-2xl md:px-10 md:pt-12 md:pb-10 px-6 py-6">
+          <div class="flex items-center">
+            <svg width="40" height="41" class="mr-6 max-md:w-6">
+              <use href="#icon-star" />
+            </svg>
+            <h1 class="leading-none md:text-[3.5rem] text-[2rem] font-bold grow">FAQs</h1>
           </div>
-          <details open class="md:py-[1.35rem] py-5 group">
-            <summary class="font-semibold md:text-lg list-none cursor-pointer">
-              <div class="flex items-center">
-                <p class="grow max-md:leading-5">What is Frontend Mentor, and how will it help me?</p>
-                <div>
-                  <span
-                    class="inline-flex w-7 h-7 bg-[url('./assets/images/icon-minus.svg')] group-open:bg-[url('./assets/images/icon-plus.svg')]"
-                  ></span>
+          <div
+            class="grid md:space-y-12 space-y-10 md:mt-8 mt-5 [&_summary]:font-semibold [&_summary]:md:text-lg [&_summary]:list-none [&_summary]:cursor-pointer [&_summary:hover]:text-primary [&_p]:text-grayish-purple [&_p]:mt-6 [&_p]:max-md:text-sm [&_p]:max-md:leading-normal [&_h2]:grow [&_h2]:leading-5"
+          >
+            <details open class="group [&_.plus]:hidden [&_.minus]:open:hidden [&_.plus]:open:block">
+              <summary>
+                <div class="flex items-center gap-4">
+                  <h2>What is Frontend Mentor, and how will it help me?</h2>
+                  <div>
+                    <svg width="30" height="31">
+                      <use href="#icon-minus" class="minus" />
+                      <use href="#icon-plus" class="plus" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </summary>
-            <p class="mt-6 max-md:text-sm">
-              Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills
-              with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.
-            </p>
-          </details>
-          <details class="md:py-[1.35rem] py-5 group">
-            <summary class="font-semibold md:text-lg list-none cursor-pointer">
-              <div class="flex items-center">
-                <p class="grow max-md:leading-5">Is Frontend Mentor free?</p>
-                <div>
-                  <span
-                    class="inline-flex w-7 h-7 bg-[url('./assets/images/icon-minus.svg')] group-open:bg-[url('./assets/images/icon-plus.svg')]"
-                  ></span>
+              </summary>
+              <p>
+                Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding
+                skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio
+                building.
+              </p>
+            </details>
+            <details class="group [&_.minus]:open:hidden [&_.plus]:open:block [&_.plus]:hidden">
+              <summary>
+                <div class="flex items-center gap-4">
+                  <h2>Is Frontend Mentor free?</h2>
+                  <div>
+                    <svg width="30" height="31">
+                      <use href="#icon-minus" class="minus" />
+                      <use href="#icon-plus" class="plus" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </summary>
-            <p class="mt-6 max-md:text-sm">
-              Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access
-              to a range of projects suitable for all skill levels.
-            </p>
-          </details>
-          <details class="md:py-[1.35rem] py-5 group">
-            <summary class="font-semibold md:text-lg list-none cursor-pointer">
-              <div class="flex items-center">
-                <p class="grow max-md:leading-5">Can I use Frontend Mentor projects in my portfolio?</p>
-                <div>
-                  <span
-                    class="inline-flex w-7 h-7 bg-[url('./assets/images/icon-minus.svg')] group-open:bg-[url('./assets/images/icon-plus.svg')]"
-                  ></span>
+              </summary>
+              <p>
+                Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing
+                access to a range of projects suitable for all skill levels.
+              </p>
+            </details>
+            <details class="group [&_.minus]:open:hidden [&_.plus]:open:block [&_.plus]:hidden">
+              <summary>
+                <div class="flex items-center gap-4">
+                  <h2>Can I use Frontend Mentor projects in my portfolio?</h2>
+                  <div>
+                    <svg width="30" height="31">
+                      <use href="#icon-minus" class="minus" />
+                      <use href="#icon-plus" class="plus" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </summary>
-            <p class="mt-6 max-md:text-sm">
-              Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to
-              showcase your skills to potential employers!
-            </p>
-          </details>
-          <details class="md:py-[1.35rem] py-5 group">
-            <summary class="font-semibold md:text-lg list-none cursor-pointer">
-              <div class="flex items-center">
-                <p class="grow max-md:leading-5">How can I get help if I'm stuck on a challenge?</p>
-                <div>
-                  <span
-                    class="inline-flex w-7 h-7 bg-[url('./assets/images/icon-minus.svg')] group-open:bg-[url('./assets/images/icon-plus.svg')]"
-                  ></span>
+              </summary>
+              <p>
+                Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to
+                showcase your skills to potential employers!
+              </p>
+            </details>
+            <details class="group [&_.minus]:open:hidden [&_.plus]:open:block [&_.plus]:hidden">
+              <summary>
+                <div class="flex items-center gap-4">
+                  <h2>How can I get help if I'm stuck on a challenge?</h2>
+                  <div>
+                    <svg width="30" height="31">
+                      <use href="#icon-minus" class="minus" />
+                      <use href="#icon-plus" class="plus" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </summary>
-            <p class="mt-6 max-md:text-sm">
-              The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you
-              can ask questions and seek support from other community members.
-            </p>
-          </details>
+              </summary>
+              <p>
+                The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where
+                you can ask questions and seek support from other community members.
+              </p>
+            </details>
+          </div>
         </section>
       </article>
     </main>
@@ -95,5 +121,6 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
       <a href="https://github.com/santiagoarielv98" target="_blank">Santiago Villanueva</a>.
     </div>
+    <!-- <img src="./design/desktop-design.jpg" class="desktop" alt="" /> -->
   </body>
 </html>

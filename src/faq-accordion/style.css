@@ -41,3 +41,6 @@
   font-display: swap;
   src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
 }
+
+@layer components {
+}
